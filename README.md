@@ -1,58 +1,105 @@
-# SIRIUS-BOX-CHAIN
-Kubernetes Dashboard
-Continuous Integration Continuous Deployment Go Report Card Coverage Status GitHub release License
+# Título del Proyecto
 
-Kubernetes Dashboard is a general purpose, web-based UI for Kubernetes clusters. It allows users to manage applications running in the cluster and troubleshoot them, as well as manage the cluster itself.
+_Acá va un párrafo que describa lo que es el proyecto_
 
-Dashboard UI workloads page
+## Comenzando 🚀
 
-Getting Started
-IMPORTANT: Read the Access Control guide before performing any further steps. The default Dashboard deployment contains a minimal set of RBAC privileges needed to run.
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-Install
-To deploy Dashboard, execute following command:
+Mira **Deployment** para conocer como desplegar el proyecto.
 
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.3.1/aio/deploy/recommended.yaml
-Alternatively, you can install Dashboard using Helm as described at https://artifacthub.io/packages/helm/k8s-dashboard/kubernetes-dashboard.
 
-Access
-To access Dashboard from your local workstation you must create a secure channel to your Kubernetes cluster. Run the following command:
+### Pre-requisitos 📋
 
-kubectl proxy
-Now access Dashboard at:
+_Que cosas necesitas para instalar el software y como instalarlas_
 
-http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/.
+```
+Da un ejemplo
+```
 
-Create An Authentication Token (RBAC)
-To find out how to create sample user and log in follow Creating sample user guide.
+### Instalación 🔧
 
-NOTE:
+_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-Kubeconfig Authentication method does not support external identity providers or certificate-based authentication.
-Metrics-Server has to be running in the cluster for the metrics and graphs to be available. Read more about it in Integrations guide.
-Documentation
-Dashboard documentation can be found on docs directory which contains:
+_Dí cómo será ese paso_
 
-Common: Entry-level overview.
-User Guide: Installation, Accessing Dashboard and more for users.
-Developer Guide: Getting Started, Dependency Management and more for anyone interested in contributing.
-Community, discussion, contribution, and support
-Learn how to engage with the Kubernetes community on the community page.
+```
+Da un ejemplo
+```
 
-You can reach the maintainers of this project at:
+_Y repite_
 
-#sig-ui on Kubernetes Slack
-kubernetes-sig-ui mailing list
-Issue tracker
-SIG info
-Roles
-Contribution
-Learn how to start contribution on the Contributing Guidline.
+```
+hasta finalizar
+```
 
-Code of conduct
-Participation in the Kubernetes community is governed by the Kubernetes Code of Conduct.
+_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
-License
-Apache License 2.0
+## Ejecutando las pruebas ⚙️
 
-Copyright 2019 The Kubernetes Dashboard Authors
+_Explica como ejecutar las pruebas automatizadas para este sistema_
+
+### Analice las pruebas end-to-end 🔩
+
+_Explica que verifican estas pruebas y por qué_
+
+```
+Da un ejemplo
+```
+
+### Y las pruebas de estilo de codificación ⌨️
+
+_Explica que verifican estas pruebas y por qué_
+
+```
+Da un ejemplo
+```
+
+## Despliegue 📦
+
+_Agrega notas adicionales sobre como hacer deploy_
+
+## Construido con 🛠️
+
+_Menciona las herramientas que utilizaste para crear tu proyecto_
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
+* [Maven](https://maven.apache.org/) - Manejador de dependencias
+* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+
+## Contribuyendo 🖇️
+
+Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
+
+## Wiki 📖
+
+Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
+
+## Versionado 📌
+
+Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+
+## Autores ✒️
+
+_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+
+* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
+* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
+
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+
+## Licencia 📄
+
+Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+
+## Expresiones de Gratitud 🎁
+
+* Comenta a otros sobre este proyecto 📢
+* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
+* Da las gracias públicamente 🤓.
+* etc.
+
+
+
+---
+⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
