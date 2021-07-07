@@ -1,17 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns="http://www.w3.org/1999/xhtml">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="HACKATON 2021 OBIO">
-    <meta name="author" content="Angel Ariel Plaza Acuña">
-    <html xmlns="http://www.w3.org/1999/xhtml">
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-
-    <link rel="shortcut icon" href="C:\Users\ariel\Desktop\SIRIUS-BOX-CHAIN\sirius-web-app\assets\images\obiologo.ico" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
     <script src="assets/js/jquery-1.10.2.min.js"></script>
     <script src="assets/js/jquery.maphighlight.min.js"></script>
     <script src="assets/js/imageMapResizer.min.js"></script>
@@ -34,7 +25,7 @@
                 e.preventDefault(); 
                 $($(this).data('parent-map')).click(); 
             });
-            
+			
         
             $('.area').hover(function () {
                 var id_estado = $(this).data('id-estado');
@@ -82,123 +73,17 @@
                     last_selected_id_estado = $(this).data('id-estado');
                     cargarEstado(last_selected_id_estado);
             });
-                                    
+									
             $('.map').maphilight({ fade: true,strokeColor: '950054', fillColor: '950054', fillOpacity: 0.3 });//funciona, pero no cuando se redimienciona la imagen (cuando se cambia el estylo de la img con widt o height)                        
         });
-                            
+			           		
 </script>
     <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
-    <title>OBIO |BOX CHAIN</title>
-
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    </head>
-    
-    <body>
-    
-    <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
-      <div class="preloader-inner">
-        <span class="dot"></span>
-        <div class="dots">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
-    
-    
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** --><img src="assets/images/obiologo.png" width="78" height="78">
-                        <a href="index.html" class="logo">BOX<em>CHAIN</em></a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li><a href="index.html" class="active"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-  <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
-</svg> Inicio</a></li>
-                            <li><a href="products.html" ><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
-  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
-</svg> Productos</a></li>
-                            <li><a href="checkout.html"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
-  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-</svg> Carrito</a></li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-  <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
-  <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
-</svg> Sobre nosotros</a>
-                              
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="about.html">Acerca de</a>
-                                    <a class="dropdown-item" href="blog.html">Blog</a>
-                                    <a class="dropdown-item" href="testimonials.html">Testimonios</a>
-                                    <a class="dropdown-item" href="terms.html">Terminos y condiciones</a>
-                                </div>
-                            </li>
-                            <li><a href="contact.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-chat-right-text-fill" viewBox="0 0 16 16">
-  <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM3.5 3h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z"/>
-</svg> Contactanos</a></li> 
-                        </ul>        
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
-
-    <!-- ***** Main Banner Area Start ***** -->
-    <div class="main-banner" id="top">
-        <video autoplay muted loop id="bg-video">
-            <source src="assets/images/video.mp4" type="video/mp4" />
-        </video>
-
-        <div class="video-overlay header-text">
-            <div class="caption">
-                <h6>Organico,Biologico, Bio(vida), Biodiverso, Biosfera</h6>
-                <h2>O<em>BIO</em> </h2>
-                <div class="main-button">
-                    <a href="about.html">¿Quienes somos?</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ***** Main Banner Area End ***** -->
-
-   <!-- ***** Cars Starts ***** -->
-    <section class="section" id="trainers">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading">
-                        <h2>Linea de <em>Productos</em></h2>
-                        <img src="assets/images/line-dec.png" alt="">
-                        <p>Las cooperativas, comunidades y empresas sociales que integran está iniciativa comercial de acercar sus productos a los consumidores de la ciudad de México, están comprometidos en salvaguardar la biodiversidad, sus parcelas de cafetales, de cacaotales, sus apiarios y sus huertos son parte de ella, sus familias viven en ellas, la cuidan con sus manos, con su corazón, con la convicción que este mundo puede ser mejor si mantenemos y conservamos el medio ambiente, porque convivimos con él.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                
-                <div class="col-lg-4">
-                    <div class="trainer-item2">
-                        
-     <form id="form1" >
+		
+	
+</head>
+<body>
+    <form id="form1" >
         <div id="control_map">
         <map name="mexico" id="map_ID">
             <area id="AGU" data-id-estado="1" alt="AGU" title="Aguascalientes" class="area" href="www.cofemer.gob.mx" shape="poly" coords="317,269,317,268,319,268,319,269,320,269,320,270,321,270,321,272,322,272,322,275,323,275,323,276,324,276,324,277,325,277,325,278,324,278,324,279,322,279,322,280,321,280,321,281,320,281,320,282,319,282,319,283,315,283,315,282,312,282,312,281,308,281,308,282,306,282,306,283,306,282,305,282,305,280,304,280,304,277,305,277,305,275,307,275,307,274,308,274,308,273,310,273,310,272,311,272,311,271,313,271,313,270,315,269,317,269" />
@@ -233,245 +118,49 @@
             <area id="VER" data-id-estado="30" alt="VER" title="Veracruz" class="area" href="#" shape="poly" coords="431,330,431,328,432,328,432,326,433,326,433,325,434,325,434,322,433,322,433,321,431,321,431,320,429,320,429,319,425,319,425,320,424,320,424,322,424,321,422,321,422,320,421,320,421,316,422,316,422,315,424,315,424,314,425,314,425,310,424,310,424,309,422,309,422,307,421,307,421,304,416,304,416,305,415,305,415,306,414,306,414,308,410,308,410,309,409,309,409,310,408,310,408,311,407,311,407,312,406,312,406,313,405,313,405,314,403,314,403,315,403,313,402,313,403,313,403,310,404,310,404,307,403,307,404,307,404,306,405,306,405,305,409,305,409,302,410,302,410,299,411,299,411,297,410,297,410,296,408,296,408,294,404,294,404,293,403,293,403,288,402,288,402,286,401,286,401,285,402,285,402,284,403,284,403,277,404,277,404,275,405,275,405,273,406,273,406,270,405,270,405,269,404,269,404,268,403,268,407,268,407,267,408,267,408,268,409,268,409,269,411,269,411,270,412,270,412,271,413,271,413,272,415,272,415,273,416,273,416,275,417,275,417,278,418,278,418,281,419,281,419,283,420,283,420,285,421,285,421,287,422,287,422,289,423,289,423,290,424,290,424,292,425,292,425,295,427,295,427,286,426,286,426,284,425,284,425,283,424,283,424,282,423,282,423,281,422,281,422,280,421,280,421,279,421,280,422,280,422,281,423,281,423,282,424,282,424,283,425,283,425,284,426,284,426,285,427,285,427,297,428,297,428,300,429,300,429,303,430,303,430,306,431,306,431,307,432,307,432,308,433,308,433,309,434,309,434,310,435,310,435,312,436,312,436,313,437,313,437,314,438,314,438,315,439,315,439,316,440,316,440,317,441,317,441,319,442,319,442,320,443,320,443,322,444,322,444,323,445,323,445,325,446,325,446,327,447,327,447,328,448,328,448,331,449,331,449,336,450,336,450,338,451,338,451,339,452,339,452,340,453,340,453,341,454,341,454,342,455,342,455,343,456,343,456,344,457,344,457,345,458,345,458,346,459,346,459,347,460,347,460,348,461,348,461,349,463,349,461,349,461,352,466,352,466,351,476,351,476,352,477,352,477,353,479,353,479,354,480,354,480,355,482,355,482,356,484,356,484,357,486,357,486,359,487,359,487,361,488,361,488,363,489,363,489,364,491,364,491,365,496,365,496,364,500,364,500,366,501,366,501,371,502,371,502,372,503,372,503,373,504,373,504,374,505,374,505,375,506,375,506,376,507,376,507,377,508,377,508,378,509,378,509,379,510,379,510,381,511,381,511,384,512,384,512,385,510,385,510,386,508,386,508,387,486,387,486,385,485,385,485,384,484,384,484,383,482,383,482,382,481,382,481,381,480,381,480,380,479,380,479,379,478,379,478,378,479,378,479,376,478,376,478,375,475,375,475,376,473,376,473,377,471,377,471,378,470,378,470,379,468,379,468,380,466,380,466,379,464,379,464,377,463,377,463,374,464,374,464,372,465,372,465,369,464,369,464,366,463,366,463,365,462,365,462,364,455,364,455,363,454,363,454,362,453,362,453,360,452,360,452,359,451,359,451,357,450,357,450,356,449,356,449,355,448,355,448,354,446,354,446,353,442,353,442,358,441,358,441,360,440,360,440,361,440,359,434,359,434,360,434,359,433,359,433,357,432,357,432,356,431,356,431,355,429,355,429,354,428,354,428,353,429,353,429,352,430,352,430,349,431,349,431,346,433,346,433,345,435,345,435,344,436,344,436,341,435,341,435,340,431,340,431,339,429,339,429,337,428,337,428,336,429,336,429,332,430,332,430,330,431,330" />
             <area id="YUC" data-id-estado="31" alt="YUC" title="Yucat&aacute;n" class="area" href="#" shape="poly" coords="610,281,610,280,612,280,612,279,614,279,614,278,616,278,616,277,618,277,618,276,621,276,621,275,633,275,633,276,637,276,637,277,639,277,639,278,640,278,640,279,641,279,641,283,642,283,642,285,641,285,641,289,640,289,640,292,639,292,639,294,638,294,638,295,637,295,637,296,636,296,636,297,635,297,635,298,633,298,633,299,632,299,632,300,630,300,630,301,629,301,629,302,628,302,628,303,627,303,627,304,625,304,625,305,624,305,624,306,622,306,622,307,621,307,621,308,620,308,620,309,618,309,618,310,617,310,617,311,616,311,616,312,614,312,614,313,613,313,613,314,612,314,612,315,610,315,610,316,609,316,609,317,608,317,608,318,606,318,606,319,605,319,605,320,603,320,603,319,602,319,602,318,601,318,601,317,600,317,600,316,599,316,599,315,598,315,598,313,597,313,597,312,596,312,596,311,595,311,595,310,594,310,594,309,593,309,593,308,592,308,592,307,591,307,591,306,590,306,590,305,589,305,589,304,585,304,585,305,582,305,582,299,581,299,581,296,580,296,580,295,581,295,581,293,582,293,582,291,583,291,583,290,585,290,585,289,586,289,586,288,588,288,588,287,589,287,589,286,592,286,592,285,594,285,594,284,597,284,597,283,600,283,600,282,606,281,610,281" />
             <area id="ZAC" data-id-estado="32" alt="ZAC" title="Zacatecas" class="area" href="#" shape="poly" coords="318,202,318,203,322,203,322,204,325,204,325,205,328,205,328,206,329,206,329,207,330,207,330,208,331,208,331,209,332,209,332,210,333,210,333,211,339,211,339,212,340,212,340,213,341,213,341,215,342,215,342,216,344,216,344,217,347,217,346,217,346,218,345,218,345,219,344,219,344,220,343,220,343,222,340,222,340,223,339,223,339,228,338,228,338,230,337,230,337,231,336,231,336,232,335,232,335,234,334,234,334,235,333,235,333,236,332,236,332,237,331,237,331,238,330,238,330,239,328,239,328,240,327,240,327,241,323,241,323,242,319,242,319,243,317,243,317,244,316,244,316,245,315,245,315,248,316,248,316,249,317,249,317,256,318,256,318,257,319,257,319,258,320,258,320,259,321,259,321,260,323,260,323,261,324,261,324,262,325,262,325,263,326,263,326,265,327,265,327,266,329,266,329,265,332,265,332,264,334,264,334,263,335,263,335,262,336,262,336,260,336,262,337,262,337,264,336,264,336,265,335,265,335,268,336,268,336,271,337,271,337,274,336,274,336,277,335,277,335,278,334,278,334,279,334,278,333,278,333,277,331,277,331,276,329,276,329,275,326,275,326,274,325,274,325,271,324,271,324,270,323,270,323,268,322,268,322,267,321,267,321,266,320,266,320,265,316,265,316,266,315,266,315,267,313,267,313,268,310,268,310,269,309,269,309,270,308,270,308,271,306,271,306,272,305,272,305,273,303,273,303,275,302,275,302,283,303,283,303,285,304,285,304,286,306,286,306,287,307,287,307,291,306,291,306,292,304,292,304,293,303,293,303,294,299,294,299,295,285,295,285,294,283,294,283,293,284,293,284,290,285,290,285,288,286,288,286,287,287,287,287,285,288,285,288,283,289,283,289,280,293,280,293,279,295,279,295,277,296,277,296,276,297,276,297,274,298,274,298,272,299,272,299,265,298,265,298,264,291,264,291,265,290,265,290,269,289,269,289,270,287,270,287,268,288,268,288,264,289,264,289,261,288,261,288,260,287,260,287,259,286,259,286,258,287,258,287,256,286,256,286,255,279,255,279,260,280,260,280,261,277,261,277,252,278,252,278,245,279,245,279,242,280,242,280,240,281,240,281,239,282,239,282,238,284,238,284,237,285,237,285,228,286,228,286,227,288,227,288,226,289,226,289,225,290,225,290,224,291,224,291,223,292,223,292,221,293,221,293,220,294,220,294,219,301,219,301,220,315,220,315,207,314,207,314,204,313,204,313,202,318,202" />
-        </map>      
-        
+        </map>		
+        <div class="content_list_states" style="width: 159px;">
+            <span id="letrasAGU" data-parent-map="#AGU" class="listaEdos" >Aguascalientes</span>
+            <span id="letrasBCN" data-parent-map="#BCN" class="listaEdos" >Baja California</span>
+            <span id="letrasBCS" data-parent-map="#BCS" class="listaEdos" >Baja California Sur</span>
+            <span id="letrasCAM" data-parent-map="#CAM" class="listaEdos" >Campeche</span>
+            <span id="letrasCOA" data-parent-map="#COA" class="listaEdos" >Coahuila</span>
+            <span id="letrasCOL" data-parent-map="#COL" class="listaEdos" >Colima</span>
+            <span id="letrasCHP" data-parent-map="#CHP" class="listaEdos" >Chiapas</span>
+            <span id="letrasCHH" data-parent-map="#CHH" class="listaEdos" >Chihuahua</span>
+            <span id="letrasDIF" data-parent-map="#DIF" class="listaEdos" >Distrito Federal</span>
+            <span id="letrasDUR" data-parent-map="#DUR" class="listaEdos" >Durango</span>
+            <span id="letrasGUA" data-parent-map="#GUA" class="listaEdos" >Guanajuato</span>
+            <span id="letrasGRO" data-parent-map="#GRO" class="listaEdos" >Guerrero</span>
+            <span id="letrasHID" data-parent-map="#HID" class="listaEdos" >Hidalgo</span>
+            <span id="letrasJAL" data-parent-map="#JAL" class="listaEdos" >Jalisco</span>
+            <span id="letrasMEX" data-parent-map="#MEX" class="listaEdos" >Estado de M&eacute;xico</span>
+            <span id="letrasMIC" data-parent-map="#MIC" class="listaEdos" >Michoac&aacute;n</span>
+            </div>
+        <div class="content_list_states" style="width: 124px;">
+            <span id="letrasMOR" data-parent-map="#MOR" class="listaEdos" >Morelos</span>
+            <span id="letrasNAY" data-parent-map="#NAY" class="listaEdos" >Nayarit</span>
+            <span id="letrasNLE" data-parent-map="#NLE" class="listaEdos" >Nuevo Le&oacute;n</span>
+            <span id="letrasOAX" data-parent-map="#OAX" class="listaEdos" >Oaxaca</span>
+            <span id="letrasPUE" data-parent-map="#PUE" class="listaEdos" >Puebla</span>
+            <span id="letrasQUE" data-parent-map="#QUE" class="listaEdos" >Quer&eacute;taro</span>
+            <span id="letrasROO" data-parent-map="#ROO" class="listaEdos" >Quintana roo</span>
+            <span id="letrasSLP" data-parent-map="#SLP" class="listaEdos" >San Luis Potos&iacute;</span>
+            <span id="letrasSIN" data-parent-map="#SIN" class="listaEdos" >Sinaloa</span>
+            <span id="letrasSON" data-parent-map="#SON" class="listaEdos" >Sonora</span>
+            <span id="letrasTAB" data-parent-map="#TAB" class="listaEdos" >Tabasco</span>
+            <span id="letrasTAM" data-parent-map="#TAM" class="listaEdos" >Tamaulipas</span>
+            <span id="letrasTLA" data-parent-map="#TLA" class="listaEdos" >Tlaxcala</span>
+            <span id="letrasVER" data-parent-map="#VER" class="listaEdos" >Veracruz</span>
+            <span id="letrasYUC" data-parent-map="#YUC" class="listaEdos" >Yucat&aacute;n</span>
+            <span id="letrasZAC" data-parent-map="#ZAC" class="listaEdos" >Zacatecas</span>
+        </div>
         <div id='content_mapa'>            
             <img id="map_ID" class="map" src="assets/images/mapa.png" usemap="#mexico" title="Mexico" alt="Mexico" />
-            <div id="edo" >&nbsp;</div>
+			<div id="edo" >&nbsp;</div>
             <div class="escudo"></div>
         </div>        
         </div>
-    </form> 
-                    </div>
-                </div>
-                 <div class="col-lg-4">
-                    <div class="trainer-item3">
-                        <video autoplay muted loop width="600" height="500"    id="bg-video2">
-            <source src="assets/images/video2.mp4" type="video/mp4" />
-        </video>
-                      
-                    </div>
-                </div>
-            </div>
-
-            <br>
-
-            <div class="main-button text-center">
-                <a href="products.html">Ver mas productos</a>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Cars Ends ***** -->
-
-    <section class="section section-bg" id="schedule" style="background-image: url(assets/images/about-fullscreen-1-1920x700.jpg)">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading dark-bg">
-                        <h2>Read <em>About Us</em></h2>
-                        <img src="assets/images/line-dec.png" alt="">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="cta-content text-center">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore deleniti voluptas enim! Provident consectetur id earum ducimus facilis, aspernatur hic, alias, harum rerum velit voluptas, voluptate enim! Eos, sunt, quidem.</p>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto nulla quo cum officia laboriosam. Amet tempore, aliquid quia eius commodi, doloremque omnis delectus laudantium dolor reiciendis non nulla! Doloremque maxime quo eum in culpa mollitia similique eius doloribus voluptatem facilis! Voluptatibus, eligendi, illum. Distinctio, non!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ***** Blog Start ***** -->
-    <section class="section" id="our-classes">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading">
-                        <h2>Read our <em>Blog</em></h2>
-                        <img src="assets/images/line-dec.png" alt="">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row" id="tabs">
-              <div class="col-lg-4">
-                <ul>
-                  <li><a href='#tabs-1'>Lorem ipsum dolor sit amet, consectetur adipisicing.</a></li>
-                  <li><a href='#tabs-2'>Aspernatur excepturi magni, placeat rerum nobis magnam libero! Soluta.</a></li>
-                  <li><a href='#tabs-3'>Sunt hic recusandae vitae explicabo quidem laudantium corrupti non adipisci nihil.</a></li>
-                  <div class="main-rounded-button"><a href="blog.html">Leer mas</a></div>
-                </ul>
-              </div>
-              <div class="col-lg-8">
-                <section class='tabs-content'>
-                  <article id='tabs-1'>
-                    <img src="assets/images/blog-image-1-940x460.jpg" alt="">
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-
-                    <p><i class="fa fa-user"></i> John Doe &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 27.07.2020 10:10 &nbsp;|&nbsp; <i class="fa fa-comments"></i>  15 comments</p>
-
-                    <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
-                    <div class="main-button">
-                        <a href="blog-details.html">Continuar leyendo</a>
-                    </div>
-                  </article>
-                  <article id='tabs-2'>
-                    <img src="assets/images/blog-image-2-940x460.jpg" alt="">
-                    <h4>Aspernatur excepturi magni, placeat rerum nobis magnam libero! Soluta.</h4>
-                    <p><i class="fa fa-user"></i> John Doe &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 27.07.2020 10:10 &nbsp;|&nbsp; <i class="fa fa-comments"></i>  15 comments</p>
-                    <p>Integer dapibus, est vel dapibus mattis, sem mauris luctus leo, ac pulvinar quam tortor a velit. Praesent ultrices erat ante, in ultricies augue ultricies faucibus. Nam tellus nibh, ullamcorper at mattis non, rhoncus sed massa. Cras quis pulvinar eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                    <div class="main-button">
-                        <a href="blog-details.html">Continuar leyendo</a>
-                    </div>
-                  </article>
-                  <article id='tabs-3'>
-                    <img src="assets/images/blog-image-3-940x460.jpg" alt="">
-                    <h4>Sunt hic recusandae vitae explicabo quidem laudantium corrupti non adipisci nihil.</h4>
-                    <p><i class="fa fa-user"></i> John Doe &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 27.07.2020 10:10 &nbsp;|&nbsp; <i class="fa fa-comments"></i>  15 comments</p>
-                    <p>Fusce laoreet malesuada rhoncus. Donec ultricies diam tortor, id auctor neque posuere sit amet. Aliquam pharetra, augue vel cursus porta, nisi tortor vulputate sapien, id scelerisque felis magna id felis. Proin neque metus, pellentesque pharetra semper vel, accumsan a neque.</p>
-                    <div class="main-button">
-                        <a href="blog-details.html">Continuar leyendo</a>
-                    </div>
-                  </article>
-                </section>
-              </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Blog End ***** -->
-
-    <!-- ***** Call to Action Start ***** -->
-    <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    <div class="cta-content">
-                        <h2>Send us a <em>message</em></h2>
-                        <p>Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula, sit amet dapibus odio augue eget libero. Morbi tempus mauris a nisi luctus imperdiet.</p>
-                        <div class="main-button">
-                            <a href="contact.html">Contactenos</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Call to Action End ***** -->
-
-    <!-- ***** Testimonials Item Start ***** -->
-    <section class="section" id="features">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading">
-                        <h2>Read our <em>Testimonials</em></h2>
-                        <img src="assets/images/line-dec.png" alt="waves">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem incidunt alias minima tenetur nemo necessitatibus?</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="First One">
-                            </div>
-                            <div class="right-content">
-                                <h4>John Doe</h4>
-                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta numquam maxime voluptatibus, impedit sed! Necessitatibus repellendus sed deleniti id et!"</em></p>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="second one">
-                            </div>
-                            <div class="right-content">
-                                <h4>John Doe</h4>
-                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta numquam maxime voluptatibus, impedit sed! Necessitatibus repellendus sed deleniti id et!"</em></p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="fourth muscle">
-                            </div>
-                            <div class="right-content">
-                                <h4>John Doe</h4>
-                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta numquam maxime voluptatibus, impedit sed! Necessitatibus repellendus sed deleniti id et!"</em></p>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img border-radius= "5px 30px 45px 60px" src="assets/images/campesino_0.jpg" alt="training fifth">
-                            </div>
-                            <div class="right-content">
-                                <h4>John Doe</h4>
-                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta numquam maxime voluptatibus, impedit sed! Necessitatibus repellendus sed deleniti id et!"</em></p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <br>
-
-            <div class="main-button text-center">
-                <a href="testimonials.html">LEER MAS</a>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Testimonials Item End ***** -->
-    
-    <!-- ***** Footer Start ***** -->
-    <footer class="pie_pagina">
-       
-    
-
-        <div class="container">
-           
-        <ul class="socialIcons">
-  <li class="facebook"><a href=""><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>
-  <li class="twitter"><a href=""><i class="fa fa-fw fa-twitter"></i>Twitter</a></li>
-  <li class="instagram"><a href=""><i class="fa fa-fw fa-instagram"></i>Instagram</a></li>
-  <li class="pinterest"><a href=""><i class="fa fa-fw fa-pinterest-p"></i>Pinterest</a></li>
-  <li class="steam"><a href=""><i class="fa fa-fw fa-steam"></i>Steam</a></li>
-</ul>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>
-                        Copyright © 2021 SIRIUS MEXICO
-                       
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="assets/js/popper.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-
-    <!-- Plugins -->
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script> 
-    <script src="assets/js/mixitup.js"></script> 
-    <script src="assets/js/accordions.js"></script>
-    
-    <!-- Global Init -->
-    <script src="assets/js/custom.js"></script>
-
-  </body>
+    </form>    
+</body>
 </html>

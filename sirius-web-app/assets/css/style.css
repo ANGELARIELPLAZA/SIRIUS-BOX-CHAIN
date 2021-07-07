@@ -18,12 +18,12 @@ figure, header, nav, section, article, aside, footer, figcaption {
 }
 .map{                    
   position: relative;
-  right: 80px;
+  right: 100px;
   top:0px;                    
         
 }
 #content_mapa{
-  float:right;
+  float:left;
 }
 .content_list_states{
   float:left;
@@ -46,7 +46,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 
 #edo{/*letras del estado*/
   /*position: absolute;top: 120px;left: 560px;*/
-        position: relative; top: -440px;left: 265px;
+        position: relative; top: -440px;left: 65px;
         font-size: 2em;
   color: #950054 ;z-index: 2;
   text-align: center;
@@ -54,7 +54,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 }
 .escudo{                    
   /*position: absolute; top: 160px;left: 650px;*/
-        position: relative; top: -420px;left: 355px;
+        position: relative; top: -420px;left: 155px;
   width:120px;
   height:120px;
   float: left;        
@@ -66,12 +66,12 @@ figure, header, nav, section, article, aside, footer, figcaption {
 /*mapa */
 .pie_pagina
 {
-   background:linear-gradient(30deg, crimson,sienna, royalblue, indianred, purple);
+   background:linear-gradient(30deg, #757B63,#F58220, #FBAF1C, #F36F4F, #323E48);
 }
 .trainer-item2 img
 {
-     width: 500px;
-    height: 500px;
+     width: 425px;
+    height: 350px;
     border-radius: 5px;
     border-spacing: 40px 50px 50px  50px ;
 }
@@ -308,7 +308,7 @@ header
 
 .header-area .main-nav .logo em {
   font-style: normal;
-  color: rgb(255,111,74);
+  color:#636569;
   font-weight: 900;
 }
 
@@ -352,13 +352,13 @@ header
 
 .header-area .main-nav .nav li:hover > a,
 .header-area .main-nav .nav li > a.active {
-  color: rgb(255,111,74)!important;
+  color: #636569 !important;
   opacity: 1;
 }
 
 .background-header .main-nav .nav li:hover > a,
 .background-header .main-nav .nav li > a.active {
-  color: rgb(255,111,74)!important;
+  color: #323E48 !important;
   opacity: 1;
 }
 
@@ -1323,7 +1323,7 @@ responsive
 .dropdown-menu a.active,
 .dropdown-menu a:hover {
   background: transparent;
-  color: rgb(255, 111, 75);!important;
+  color: #636569;!important;
 }
 
 .pagination-lg .page-link {
