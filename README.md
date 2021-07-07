@@ -1,4 +1,4 @@
-# Título del Proyecto
+# SIRIUS BOX CHAIN-OBIO
 
 _Acá va un párrafo que describa lo que es el proyecto_
 
@@ -11,8 +11,7 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
-
+Sublime text 3
 ```
 Da un ejemplo
 ```
@@ -94,12 +93,11 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 
 ## Expresiones de Gratitud 🎁
 
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
+
 * Da las gracias públicamente 🤓.
-* etc.
+
 
 
 
 ---
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+⌨️ con ❤️ por [Angel Ariel Plaza Acuña](https://github.com/ANGELARIELPLAZA) 😊
