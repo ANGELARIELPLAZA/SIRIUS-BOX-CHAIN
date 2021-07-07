@@ -154,11 +154,11 @@ if ( !$( "<a>" ).outerWidth( 1 ).jquery ) {
 				outerHeight: $.fn.outerHeight
 			};
 
-		function reduce( elem, size, border, margin ) {
+		function reduce( elem, size, bOrder, margin ) {
 			$.each( side, function() {
 				size -= parseFloat( $.css( elem, "padding" + this ) ) || 0;
-				if ( border ) {
-					size -= parseFloat( $.css( elem, "border" + this + "Width" ) ) || 0;
+				if ( bOrder ) {
+					size -= parseFloat( $.css( elem, "bOrder" + this + "Width" ) ) || 0;
 				}
 				if ( margin ) {
 					size -= parseFloat( $.css( elem, "margin" + this ) ) || 0;
@@ -1516,7 +1516,7 @@ $.ui.position = {
 		visibility: "hidden",
 		width: 0,
 		height: 0,
-		border: 0,
+		bOrder: 0,
 		margin: 0,
 		background: "none"
 	};
@@ -1580,16 +1580,16 @@ var accordion = $.widget( "ui.accordion", {
 	},
 
 	hideProps: {
-		borderTopWidth: "hide",
-		borderBottomWidth: "hide",
+		bOrderTopWidth: "hide",
+		bOrderBottomWidth: "hide",
 		paddingTop: "hide",
 		paddingBottom: "hide",
 		height: "hide"
 	},
 
 	showProps: {
-		borderTopWidth: "show",
-		borderBottomWidth: "show",
+		bOrderTopWidth: "show",
+		bOrderBottomWidth: "show",
 		paddingTop: "show",
 		paddingBottom: "show",
 		height: "show"
@@ -1852,7 +1852,7 @@ var accordion = $.widget( "ui.accordion", {
 				})
 				.hide();
 
-		// make sure at least one header is in the tab order
+		// make sure at least one header is in the tab Order
 		if ( !this.active.length ) {
 			this.headers.eq( 0 ).attr( "tabIndex", 0 );
 		} else {
@@ -2020,9 +2020,9 @@ var accordion = $.widget( "ui.accordion", {
 			"aria-hidden": "true"
 		});
 		toHide.prev().attr( "aria-selected", "false" );
-		// if we're switching panels, remove the old header from the tab order
-		// if we're opening from collapsed state, remove the previous header from the tab order
-		// if we're collapsing, then keep the collapsing header in the tab order
+		// if we're switching panels, remove the old header from the tab Order
+		// if we're opening from collapsed state, remove the previous header from the tab Order
+		// if we're collapsing, then keep the collapsing header in the tab Order
 		if ( toShow.length && toHide.length ) {
 			toHide.prev().attr({
 				"tabIndex": -1,
@@ -2214,7 +2214,7 @@ var menu = $.widget( "ui.menu", {
 				}
 				var target = $( event.currentTarget );
 				// Remove ui-state-active class from siblings of the newly focused menu item
-				// to avoid a jump caused by adjacent elements both having a class with a border
+				// to avoid a jump caused by adjacent elements both having a class with a bOrder
 				target.siblings( ".ui-state-active" ).removeClass( "ui-state-active" );
 				this.focus( event, target );
 			},
@@ -2498,11 +2498,11 @@ var menu = $.widget( "ui.menu", {
 	},
 
 	_scrollIntoView: function( item ) {
-		var borderTop, paddingTop, offset, scroll, elementHeight, itemHeight;
+		var bOrderTop, paddingTop, offset, scroll, elementHeight, itemHeight;
 		if ( this._hasScroll() ) {
-			borderTop = parseFloat( $.css( this.activeMenu[0], "borderTopWidth" ) ) || 0;
+			bOrderTop = parseFloat( $.css( this.activeMenu[0], "bOrderTopWidth" ) ) || 0;
 			paddingTop = parseFloat( $.css( this.activeMenu[0], "paddingTop" ) ) || 0;
-			offset = item.offset().top - this.activeMenu.offset().top - borderTop - paddingTop;
+			offset = item.offset().top - this.activeMenu.offset().top - bOrderTop - paddingTop;
 			scroll = this.activeMenu.scrollTop();
 			elementHeight = this.activeMenu.height();
 			itemHeight = item.outerHeight();
@@ -6245,8 +6245,8 @@ $.widget("ui.draggable", $.ui.mouse, {
 		}
 
 		return {
-			top: po.top + (parseInt(this.offsetParent.css("borderTopWidth"), 10) || 0),
-			left: po.left + (parseInt(this.offsetParent.css("borderLeftWidth"), 10) || 0)
+			top: po.top + (parseInt(this.offsetParent.css("bOrderTopWidth"), 10) || 0),
+			left: po.left + (parseInt(this.offsetParent.css("bOrderLeftWidth"), 10) || 0)
 		};
 
 	},
@@ -6334,16 +6334,16 @@ $.widget("ui.draggable", $.ui.mouse, {
 		isUserScrollable = /(scroll|auto)/.test( c.css( "overflow" ) );
 
 		this.containment = [
-			( parseInt( c.css( "borderLeftWidth" ), 10 ) || 0 ) + ( parseInt( c.css( "paddingLeft" ), 10 ) || 0 ),
-			( parseInt( c.css( "borderTopWidth" ), 10 ) || 0 ) + ( parseInt( c.css( "paddingTop" ), 10 ) || 0 ),
+			( parseInt( c.css( "bOrderLeftWidth" ), 10 ) || 0 ) + ( parseInt( c.css( "paddingLeft" ), 10 ) || 0 ),
+			( parseInt( c.css( "bOrderTopWidth" ), 10 ) || 0 ) + ( parseInt( c.css( "paddingTop" ), 10 ) || 0 ),
 			( isUserScrollable ? Math.max( ce.scrollWidth, ce.offsetWidth ) : ce.offsetWidth ) -
-				( parseInt( c.css( "borderRightWidth" ), 10 ) || 0 ) -
+				( parseInt( c.css( "bOrderRightWidth" ), 10 ) || 0 ) -
 				( parseInt( c.css( "paddingRight" ), 10 ) || 0 ) -
 				this.helperProportions.width -
 				this.margins.left -
 				this.margins.right,
 			( isUserScrollable ? Math.max( ce.scrollHeight, ce.offsetHeight ) : ce.offsetHeight ) -
-				( parseInt( c.css( "borderBottomWidth" ), 10 ) || 0 ) -
+				( parseInt( c.css( "bOrderBottomWidth" ), 10 ) || 0 ) -
 				( parseInt( c.css( "paddingBottom" ), 10 ) || 0 ) -
 				this.helperProportions.height -
 				this.margins.top -
@@ -6365,13 +6365,13 @@ $.widget("ui.draggable", $.ui.mouse, {
 			top: (
 				pos.top	+																// The absolute mouse position
 				this.offset.relative.top * mod +										// Only for relative positioned nodes: Relative offset from element to offset parent
-				this.offset.parent.top * mod -										// The offsetParent's offset without borders (offset + border)
+				this.offset.parent.top * mod -										// The offsetParent's offset without bOrders (offset + bOrder)
 				( ( this.cssPosition === "fixed" ? -this.offset.scroll.top : ( scrollIsRootNode ? 0 : this.offset.scroll.top ) ) * mod)
 			),
 			left: (
 				pos.left +																// The absolute mouse position
 				this.offset.relative.left * mod +										// Only for relative positioned nodes: Relative offset from element to offset parent
-				this.offset.parent.left * mod	-										// The offsetParent's offset without borders (offset + border)
+				this.offset.parent.left * mod	-										// The offsetParent's offset without bOrders (offset + bOrder)
 				( ( this.cssPosition === "fixed" ? -this.offset.scroll.left : ( scrollIsRootNode ? 0 : this.offset.scroll.left ) ) * mod)
 			)
 		};
@@ -6451,14 +6451,14 @@ $.widget("ui.draggable", $.ui.mouse, {
 				pageY -																	// The absolute mouse position
 				this.offset.click.top	-												// Click offset (relative to the element)
 				this.offset.relative.top -												// Only for relative positioned nodes: Relative offset from element to offset parent
-				this.offset.parent.top +												// The offsetParent's offset without borders (offset + border)
+				this.offset.parent.top +												// The offsetParent's offset without bOrders (offset + bOrder)
 				( this.cssPosition === "fixed" ? -this.offset.scroll.top : ( scrollIsRootNode ? 0 : this.offset.scroll.top ) )
 			),
 			left: (
 				pageX -																	// The absolute mouse position
 				this.offset.click.left -												// Click offset (relative to the element)
 				this.offset.relative.left -												// Only for relative positioned nodes: Relative offset from element to offset parent
-				this.offset.parent.left +												// The offsetParent's offset without borders (offset + border)
+				this.offset.parent.left +												// The offsetParent's offset without bOrders (offset + bOrder)
 				( this.cssPosition === "fixed" ? -this.offset.scroll.left : ( scrollIsRootNode ? 0 : this.offset.scroll.left ) )
 			)
 		};
@@ -7539,14 +7539,14 @@ $.widget("ui.resizable", $.ui.mouse, {
 		return data;
 	},
 
-	_getPaddingPlusBorderDimensions: function( element ) {
+	_getPaddingPlusBOrderDimensions: function( element ) {
 		var i = 0,
 			widths = [],
-			borders = [
-				element.css( "borderTopWidth" ),
-				element.css( "borderRightWidth" ),
-				element.css( "borderBottomWidth" ),
-				element.css( "borderLeftWidth" )
+			bOrders = [
+				element.css( "bOrderTopWidth" ),
+				element.css( "bOrderRightWidth" ),
+				element.css( "bOrderBottomWidth" ),
+				element.css( "bOrderLeftWidth" )
 			],
 			paddings = [
 				element.css( "paddingTop" ),
@@ -7556,7 +7556,7 @@ $.widget("ui.resizable", $.ui.mouse, {
 			];
 
 		for ( ; i < 4; i++ ) {
-			widths[ i ] = ( parseInt( borders[ i ], 10 ) || 0 );
+			widths[ i ] = ( parseInt( bOrders[ i ], 10 ) || 0 );
 			widths[ i ] += ( parseInt( paddings[ i ], 10 ) || 0 );
 		}
 
@@ -7583,7 +7583,7 @@ $.widget("ui.resizable", $.ui.mouse, {
 			// TODO: Seems like a bug to cache this.outerDimensions
 			// considering that we are in a loop.
 			if (!this.outerDimensions) {
-				this.outerDimensions = this._getPaddingPlusBorderDimensions( prel );
+				this.outerDimensions = this._getPaddingPlusBOrderDimensions( prel );
 			}
 
 			prel.css({
@@ -8075,7 +8075,7 @@ $.ui.plugin.add("resizable", "grid", {
 			that.position.left = op.left - ox;
 		} else {
 			if ( newHeight - gridY <= 0 || newWidth - gridX <= 0) {
-				outerDimensions = that._getPaddingPlusBorderDimensions( this );
+				outerDimensions = that._getPaddingPlusBOrderDimensions( this );
 			}
 
 			if ( newHeight - gridY > 0 ) {
@@ -8910,7 +8910,7 @@ var dialog = $.widget( "ui.dialog", {
 
 			// Prevent use of anchors and inputs
 			// Using _on() for an event handler shared across many instances is
-			// safe because the dialogs stack and must be closed in reverse order
+			// safe because the dialogs stack and must be closed in reverse Order
 			this._on( this.document, {
 				focusin: function( event ) {
 					if ( isOpening ) {
@@ -9389,7 +9389,7 @@ $.effects = {
  */
 (function( jQuery, undefined ) {
 
-	var stepHooks = "backgroundColor borderBottomColor borderLeftColor borderRightColor borderTopColor color columnRuleColor outlineColor textDecorationColor textEmphasisColor",
+	var stepHooks = "backgroundColor bOrderBottomColor bOrderLeftColor bOrderRightColor bOrderTopColor color columnRuleColor outlineColor textDecorationColor textEmphasisColor",
 
 	// plusequals test for += 100 -= 100
 	rplusequals = /^([\-+])=\s*(\d+\.?\d*)/,
@@ -9999,12 +9999,12 @@ color.hook = function( hook ) {
 
 color.hook( stepHooks );
 
-jQuery.cssHooks.borderColor = {
+jQuery.cssHooks.bOrderColor = {
 	expand: function( value ) {
 		var expanded = {};
 
 		each( [ "Top", "Right", "Bottom", "Left" ], function( i, part ) {
-			expanded[ "border" + part + "Color" ] = value;
+			expanded[ "bOrder" + part + "Color" ] = value;
 		});
 		return expanded;
 	}
@@ -10047,18 +10047,18 @@ colors = jQuery.Color.names = {
 
 var classAnimationActions = [ "add", "remove", "toggle" ],
 	shorthandStyles = {
-		border: 1,
-		borderBottom: 1,
-		borderColor: 1,
-		borderLeft: 1,
-		borderRight: 1,
-		borderTop: 1,
-		borderWidth: 1,
+		bOrder: 1,
+		bOrderBottom: 1,
+		bOrderColor: 1,
+		bOrderLeft: 1,
+		bOrderRight: 1,
+		bOrderTop: 1,
+		bOrderWidth: 1,
 		margin: 1,
 		padding: 1
 	};
 
-$.each([ "borderLeftStyle", "borderRightStyle", "borderBottomStyle", "borderTopStyle" ], function( _, prop ) {
+$.each([ "bOrderLeftStyle", "bOrderRightStyle", "bOrderBottomStyle", "bOrderTopStyle" ], function( _, prop ) {
 	$.fx.step[ prop ] = function( fx ) {
 		if ( fx.end !== "none" && !fx.setAttr || fx.pos === 1 && !fx.setAttr ) {
 			jQuery.style( fx.elem, prop, fx.end );
@@ -10329,7 +10329,7 @@ $.extend( $.effects, {
 				.css({
 					fontSize: "100%",
 					background: "transparent",
-					border: "none",
+					bOrder: "none",
 					margin: 0,
 					padding: 0
 				}),
@@ -11225,8 +11225,8 @@ var effectSize = $.effects.effect.size = function( o, done ) {
 		// Copy for children
 		props2 = [ "width", "height", "overflow" ],
 		cProps = [ "fontSize" ],
-		vProps = [ "borderTopWidth", "borderBottomWidth", "paddingTop", "paddingBottom" ],
-		hProps = [ "borderLeftWidth", "borderRightWidth", "paddingLeft", "paddingRight" ],
+		vProps = [ "bOrderTopWidth", "bOrderBottomWidth", "paddingTop", "paddingBottom" ],
+		hProps = [ "bOrderLeftWidth", "bOrderRightWidth", "paddingLeft", "paddingRight" ],
 
 		// Set options
 		mode = $.effects.setMode( el, o.mode || "effect" ),
@@ -13001,8 +13001,8 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 			left: event.pageX - offset.left - ( closestHandle.width() / 2 ),
 			top: event.pageY - offset.top -
 				( closestHandle.height() / 2 ) -
-				( parseInt( closestHandle.css("borderTopWidth"), 10 ) || 0 ) -
-				( parseInt( closestHandle.css("borderBottomWidth"), 10 ) || 0) +
+				( parseInt( closestHandle.css("bOrderTopWidth"), 10 ) || 0 ) -
+				( parseInt( closestHandle.css("bOrderBottomWidth"), 10 ) || 0) +
 				( parseInt( closestHandle.css("marginTop"), 10 ) || 0)
 		};
 
@@ -14467,8 +14467,8 @@ var sortable = $.widget("ui.sortable", $.ui.mouse, {
 		}
 
 		return {
-			top: po.top + (parseInt(this.offsetParent.css("borderTopWidth"),10) || 0),
-			left: po.left + (parseInt(this.offsetParent.css("borderLeftWidth"),10) || 0)
+			top: po.top + (parseInt(this.offsetParent.css("bOrderTopWidth"),10) || 0),
+			left: po.left + (parseInt(this.offsetParent.css("bOrderLeftWidth"),10) || 0)
 		};
 
 	},
@@ -14523,10 +14523,10 @@ var sortable = $.widget("ui.sortable", $.ui.mouse, {
 			over = ($(ce).css("overflow") !== "hidden");
 
 			this.containment = [
-				co.left + (parseInt($(ce).css("borderLeftWidth"),10) || 0) + (parseInt($(ce).css("paddingLeft"),10) || 0) - this.margins.left,
-				co.top + (parseInt($(ce).css("borderTopWidth"),10) || 0) + (parseInt($(ce).css("paddingTop"),10) || 0) - this.margins.top,
-				co.left+(over ? Math.max(ce.scrollWidth,ce.offsetWidth) : ce.offsetWidth) - (parseInt($(ce).css("borderLeftWidth"),10) || 0) - (parseInt($(ce).css("paddingRight"),10) || 0) - this.helperProportions.width - this.margins.left,
-				co.top+(over ? Math.max(ce.scrollHeight,ce.offsetHeight) : ce.offsetHeight) - (parseInt($(ce).css("borderTopWidth"),10) || 0) - (parseInt($(ce).css("paddingBottom"),10) || 0) - this.helperProportions.height - this.margins.top
+				co.left + (parseInt($(ce).css("bOrderLeftWidth"),10) || 0) + (parseInt($(ce).css("paddingLeft"),10) || 0) - this.margins.left,
+				co.top + (parseInt($(ce).css("bOrderTopWidth"),10) || 0) + (parseInt($(ce).css("paddingTop"),10) || 0) - this.margins.top,
+				co.left+(over ? Math.max(ce.scrollWidth,ce.offsetWidth) : ce.offsetWidth) - (parseInt($(ce).css("bOrderLeftWidth"),10) || 0) - (parseInt($(ce).css("paddingRight"),10) || 0) - this.helperProportions.width - this.margins.left,
+				co.top+(over ? Math.max(ce.scrollHeight,ce.offsetHeight) : ce.offsetHeight) - (parseInt($(ce).css("bOrderTopWidth"),10) || 0) - (parseInt($(ce).css("paddingBottom"),10) || 0) - this.helperProportions.height - this.margins.top
 			];
 		}
 
@@ -14545,13 +14545,13 @@ var sortable = $.widget("ui.sortable", $.ui.mouse, {
 			top: (
 				pos.top	+																// The absolute mouse position
 				this.offset.relative.top * mod +										// Only for relative positioned nodes: Relative offset from element to offset parent
-				this.offset.parent.top * mod -											// The offsetParent's offset without borders (offset + border)
+				this.offset.parent.top * mod -											// The offsetParent's offset without bOrders (offset + bOrder)
 				( ( this.cssPosition === "fixed" ? -this.scrollParent.scrollTop() : ( scrollIsRootNode ? 0 : scroll.scrollTop() ) ) * mod)
 			),
 			left: (
 				pos.left +																// The absolute mouse position
 				this.offset.relative.left * mod +										// Only for relative positioned nodes: Relative offset from element to offset parent
-				this.offset.parent.left * mod	-										// The offsetParent's offset without borders (offset + border)
+				this.offset.parent.left * mod	-										// The offsetParent's offset without bOrders (offset + bOrder)
 				( ( this.cssPosition === "fixed" ? -this.scrollParent.scrollLeft() : scrollIsRootNode ? 0 : scroll.scrollLeft() ) * mod)
 			)
 		};
@@ -14611,14 +14611,14 @@ var sortable = $.widget("ui.sortable", $.ui.mouse, {
 				pageY -																// The absolute mouse position
 				this.offset.click.top -													// Click offset (relative to the element)
 				this.offset.relative.top	-											// Only for relative positioned nodes: Relative offset from element to offset parent
-				this.offset.parent.top +												// The offsetParent's offset without borders (offset + border)
+				this.offset.parent.top +												// The offsetParent's offset without bOrders (offset + bOrder)
 				( ( this.cssPosition === "fixed" ? -this.scrollParent.scrollTop() : ( scrollIsRootNode ? 0 : scroll.scrollTop() ) ))
 			),
 			left: (
 				pageX -																// The absolute mouse position
 				this.offset.click.left -												// Click offset (relative to the element)
 				this.offset.relative.left	-											// Only for relative positioned nodes: Relative offset from element to offset parent
-				this.offset.parent.left +												// The offsetParent's offset without borders (offset + border)
+				this.offset.parent.left +												// The offsetParent's offset without bOrders (offset + bOrder)
 				( ( this.cssPosition === "fixed" ? -this.scrollParent.scrollLeft() : scrollIsRootNode ? 0 : scroll.scrollLeft() ))
 			)
 		};
@@ -15606,7 +15606,7 @@ var tabs = $.widget( "ui.tabs", {
 				"aria-hidden": "true"
 			});
 
-		// Make sure one tab is in the tab order
+		// Make sure one tab is in the tab Order
 		if ( !this.active.length ) {
 			this.tabs.eq( 0 ).attr( "tabIndex", 0 );
 		} else {
@@ -15905,9 +15905,9 @@ var tabs = $.widget( "ui.tabs", {
 			"aria-selected": "false",
 			"aria-expanded": "false"
 		});
-		// If we're switching tabs, remove the old tab from the tab order.
-		// If we're opening from collapsed state, remove the previous tab from the tab order.
-		// If we're collapsing, then keep the collapsing tab in the tab order.
+		// If we're switching tabs, remove the old tab from the tab Order.
+		// If we're opening from collapsed state, remove the previous tab from the tab Order.
+		// If we're collapsing, then keep the collapsing tab in the tab Order.
 		if ( toShow.length && toHide.length ) {
 			eventData.oldTab.attr( "tabIndex", -1 );
 		} else if ( toShow.length ) {

@@ -59,10 +59,10 @@
 .fa-li.fa-lg {
   left: -1.85714286em;
 }
-.fa-border {
+.fa-bOrder {
   padding: .2em .25em .15em;
-  border: solid 0.08em #eeeeee;
-  border-radius: .1em;
+  bOrder: solid 0.08em #eeeeee;
+  bOrder-radius: .1em;
 }
 .fa-pull-left {
   float: left;
@@ -731,7 +731,7 @@
   content: "\f0c8";
 }
 .fa-navicon:before,
-.fa-reorder:before,
+.fa-reOrder:before,
 .fa-bars:before {
   content: "\f0c9";
 }
@@ -2162,7 +2162,7 @@
 .fa-pied-piper:before {
   content: "\f2ae";
 }
-.fa-first-order:before {
+.fa-first-Order:before {
   content: "\f2b0";
 }
 .fa-yoast:before {
@@ -2324,7 +2324,7 @@
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  border: 0;
+  bOrder: 0;
 }
 .sr-only-focusable:active,
 .sr-only-focusable:focus {

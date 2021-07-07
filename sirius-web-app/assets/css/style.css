@@ -6,20 +6,29 @@ s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, 
 figure, header, nav, section, article, aside, footer, figcaption {
   margin: 0;
   padding: 0;
-  border: 0;
+  bOrder: 0;
   outline: 0;
+}
+
+#texto
+{
+ color: rgba(252,175,30,0.8);
+}
+#texto2
+{
+ color: rgb(255,255,255);
 }
 /*mapa*/
 #control_map{                    
   float: left;
   width: 955px;
-        margin-top: 20px;
+        margin-top: 0px;
         margin-bottom: 40px;
 }
 .map{                    
   position: relative;
   right: 100px;
-  top:0px;                    
+  top:-50px;                    
         
 }
 #content_mapa{
@@ -46,7 +55,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 
 #edo{/*letras del estado*/
   /*position: absolute;top: 120px;left: 560px;*/
-        position: relative; top: -440px;left: 65px;
+        position: relative; top: -440px;left: 900px;
         font-size: 2em;
   color: #950054 ;z-index: 2;
   text-align: center;
@@ -54,7 +63,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 }
 .escudo{                    
   /*position: absolute; top: 160px;left: 650px;*/
-        position: relative; top: -420px;left: 155px;
+        position: relative; top: -420px;left:1000px;
   width:120px;
   height:120px;
   float: left;        
@@ -72,8 +81,8 @@ figure, header, nav, section, article, aside, footer, figcaption {
 {
      width: 425px;
     height: 350px;
-    border-radius: 5px;
-    border-spacing: 40px 50px 50px  50px ;
+    bOrder-radius: 5px;
+    bOrder-spacing: 40px 50px 50px  50px ;
 }
 .trainer-item2 
 {
@@ -84,13 +93,13 @@ figure, header, nav, section, article, aside, footer, figcaption {
 {
    width: 500px;
     height: 500px;
-    border-radius: 5px;
-    border-spacing: 40px 50px 50px  50px ;
+    bOrder-radius: 5px;
+    
 }
 .trainer-item3 
 {
     
-   padding-left: 230px;
+   padding-left: 520px;
 }
 
 .clearfix:after {
@@ -125,7 +134,7 @@ header, nav, section, article, aside, footer, hgroup {
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: bOrder-box;
 }
 
 html, body {
@@ -342,7 +351,7 @@ header
   transition: all 0.3s ease 0s;
   height: 40px;
   line-height: 40px;
-  border: transparent;
+  bOrder: transparent;
   letter-spacing: 1px;
 }
 
@@ -535,7 +544,7 @@ header
     margin-left: 0px;
   }
   .header-area .main-nav .nav li:first-child {
-    border-top: 1px solid #eee;
+    bOrder-top: 1px solid #eee;
   }
   .header-area .main-nav .nav li:last-child {
     width: 100%;
@@ -549,7 +558,7 @@ header
   .header-area .main-nav .nav li {
     width: 100%;
     background: #fff;
-    border-bottom: 1px solid #eee;
+    bOrder-bottom: 1px solid #eee;
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
@@ -557,7 +566,7 @@ header
     height: 50px !important;
     line-height: 50px !important;
     padding: 0px !important;
-    border: none !important;
+    bOrder: none !important;
     background: #f7f7f7 !important;
     color: #232d39 !important;
   }
@@ -630,7 +639,7 @@ banner
     max-height: 100vh;
     object-fit: cover;
     z-index: -1;
-     border-radius: 5px;
+     bOrder-radius: 5px;
 }
 #bg-video2::-webkit-media-controls {
     display: none !important;
@@ -792,7 +801,7 @@ Our Classes
   display: inline-block;
   background-color: #fff;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
-  border-radius: 5px;
+  bOrder-radius: 5px;
   font-size: 19px;
   color: #232d39;
   letter-spacing: 0.5px;
@@ -803,7 +812,7 @@ Our Classes
   text-align: center;
   padding: 20px 30px;
   width: 100%;
-  border-radius: 5px;
+  bOrder-radius: 5px;
   display: inline-block;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
   color: #fff;
@@ -824,9 +833,9 @@ Our Classes
 }
 #tabs ul .ui-tabs-active span {
   background: #faf5b2;
-  border: #faf5b2;
+  bOrder: #faf5b2;
   line-height: 90px;
-  border-bottom: none;
+  bOrder-bottom: none;
 }
 #tabs ul .ui-tabs-active a {
   color: rgb(255,111,74);
@@ -843,7 +852,7 @@ Our Classes
 .tabs-content img {
   max-width: 100%;
   overflow: hidden;
-  border-radius: 5px;
+  bOrder-radius: 5px;
 }
 .tabs-content h4 {
   font-size: 23px;
@@ -897,19 +906,19 @@ schedule
 #schedule table {
   width: 100%;
   text-align: center;
-  border: 1px solid #fff;
+  bOrder: 1px solid #fff;
 }
 
 #schedule table tbody {
-  border-top: 1px solid #fff; 
+  bOrder-top: 1px solid #fff; 
 }
 
 #schedule table tbody tr {
-  border-bottom: 1px solid #fff;
+  bOrder-bottom: 1px solid #fff;
 }
 
 #schedule table tbody tr td {
-  border-right: 1px solid #fff;
+  bOrder-right: 1px solid #fff;
   height: 100px;
 }
 
@@ -996,7 +1005,7 @@ trainers
 
 #trainers .trainer-item {
   background-color: #fff;
-  border-radius: 5px;
+  bOrder-radius: 5px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
   padding: 15px;
   margin-bottom: 30px;
@@ -1004,7 +1013,7 @@ trainers
 
 #trainers .trainer-item img {
   width: 100%;
-  border-radius: 5px;
+  bOrder-radius: 5px;
 }
 
 #trainers .trainer-item span {
@@ -1072,7 +1081,7 @@ contact
 #contact-us .contact-form #contact {
   background-color: #fff;
   padding: 40px;
-  border-radius: 5px;
+  bOrder-radius: 5px;
 }
 
 .contact-form select,
@@ -1080,7 +1089,7 @@ contact
 .contact-form textarea {
   color: rgb(50,62,72);
   font-size: 13px;
-  border: 1px solid #ddd;
+  bOrder: 1px solid #ddd;
   background-color: #fff;
   width: 100%;
   height: 40px;
@@ -1120,7 +1129,7 @@ contact
   font-weight: 400;
   text-transform: uppercase;
   transition: all .3s;
-  border: none;
+  bOrder: none;
   outline: none;
   margin-top: -8px;
 }
@@ -1232,7 +1241,7 @@ preloader
     top: 12px;
     left: 15px;
     background: #fff;
-    border-radius: 50%;
+    bOrder-radius: 50%;
     -webkit-transform: translateX(0);
     transform: translateX(0);
     -webkit-animation: dot 2.8s infinite;
@@ -1255,7 +1264,7 @@ preloader
     height: 16px;
     margin-left: 16px;
     background: #fff;
-    border-radius: 50%;
+    bOrder-radius: 50%;
 }
 
 
@@ -1305,7 +1314,7 @@ responsive
 .dropdown-menu {
   background: rgba(0,0,0,0.2);
   padding: 0;
-  border-radius: 0;
+  bOrder-radius: 0;
 }
 
 .background-header .dropdown-menu {
@@ -1331,7 +1340,7 @@ responsive
 }
 
 .btn-primary {
-  border-color: rgb(255,111,74);
+  bOrder-color: rgb(255,111,74);
   background-color: rgb(255,111,74);
 }
 
@@ -1343,14 +1352,14 @@ responsive
 .btn-primary:focus,
 .btn-primary:hover {
   background-color: #f9735b;
-  border-color: #f9735b;
+  bOrder-color: #f9735b;
   outline: none;
 }
 
 .icon {
   width: 72px;
   height: 72px;
-  border-radius: 5px;
+  bOrder-radius: 5px;
   color: #fff;
   background-color: rgb(255,111,74);
   font-size: 30px;
@@ -1381,7 +1390,7 @@ ul.socialIcons {
   list-style: none;
   display: inline-block;
   margin: 4px;
-  border-radius: 2em;
+  bOrder-radius: 2em;
   overflow: hidden;
 }
 
