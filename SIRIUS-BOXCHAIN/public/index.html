@@ -6,18 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIRIUS |BOX CHAIN</title>
 
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-
     <link rel="stylesheet" href="assets/css/style.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
         integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+
 </head>
 
-<body class="container">
-
+<body class="container-fluid">
+    
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
@@ -46,25 +43,18 @@
                                         <path
                                             d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                                     </svg> Carrito</a></li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                                    aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg"
-                                        width="18" height="18" fill="currentColor" class="bi bi-people-fill"
-                                        viewBox="0 0 16 16">
+                            <li><a href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                        class="bi bi-people-fill" viewBox="0 0 16 16">
                                         <path
                                             d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                                         <path fill-rule="evenodd"
                                             d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
                                         <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                                    </svg> Sobre nosotros</a>
+                                    </svg> Sobre nosotros</a></li>
 
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="about.html">Acerca de</a>
-                                    <a class="dropdown-item" href="blog.html">Blog</a>
-                                    <a class="dropdown-item" href="testimonials.html">Testimonios</a>
-                                    <a class="dropdown-item" href="terms.html">Terminos y condiciones</a>
-                                </div>
-                            </li>
+
+
                             <li><a href="contact.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                         fill="currentColor" class="bi bi-chat-right-text-fill" viewBox="0 0 16 16">
                                         <path
@@ -87,6 +77,7 @@
         crossorigin="anonymous"></script>
 
     <script>
+
         // Conexión con el socket server
         const socket = io('http://localhost:8080');
 
@@ -103,6 +94,288 @@
 
     </script>
 
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <video autoplay muted loop id="bg-video">
+            <source src="assets/images/video3.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                <h6>Organico justo biodiverso</h6>
+                <h2>BOX<em>CHAIN</em> </h2>
+                <div class="main-button">
+                    <a href="about.html">¿Quienes somos?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Cars Starts ***** -->
+    <section class="section" id="trainers">
+        <div class="container">
+            <div class="section-heading white-bg">
+                <h2>¿Que vamos a comer hoy?</h2>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4">
+
+                    <form id="form1">
+                        <div id="control_map">
+                            <map name="mexico" id="map_ID">
+                                <area id="CAM" data-id-estado="4" alt="CAM" title="Campeche" class="area" href="#"
+                                    shape="poly"
+                                    coords="577,325,577,321,578,321,578,320,579,320,579,319,580,319,580,306,580,307,588,307,588,308,589,308,589,309,590,309,590,310,591,310,591,311,592,311,592,312,593,312,593,313,594,313,594,314,595,314,595,316,596,316,596,317,597,317,597,318,598,318,598,319,599,319,599,320,600,320,600,321,601,321,601,322,602,322,602,324,603,324,603,331,604,331,604,341,605,341,605,352,606,352,606,366,603,366,603,367,588,367,588,368,574,368,574,369,573,369,573,365,572,365,572,364,568,364,568,363,565,363,565,362,562,362,562,361,557,361,557,362,556,362,556,365,552,365,552,364,549,364,549,363,548,363,548,362,546,362,546,360,545,360,545,354,544,354,544,353,539,353,539,352,538,352,538,350,539,350,539,349,548,349,548,350,549,350,541,350,541,353,548,353,548,354,550,354,550,357,553,357,553,356,554,356,554,354,555,354,555,355,560,355,560,353,561,353,561,352,563,352,563,351,564,351,564,349,565,349,565,346,564,346,564,345,563,345,563,343,561,343,563,343,563,342,564,342,564,341,566,341,566,340,567,340,567,339,569,339,569,338,570,338,570,337,571,337,571,336,572,336,572,335,573,335,573,334,574,334,574,333,575,333,575,331,576,331,576,325,577,325" />
+
+                                <area id="CHP" data-id-estado="7" alt="CHP" title="Chiapas" class="area" href="#"
+                                    shape="poly"
+                                    coords="546,372,546,371,550,371,550,372,552,372,552,373,553,373,553,374,555,374,555,375,556,375,556,376,555,376,555,379,556,379,556,380,558,380,558,381,561,381,561,383,562,383,562,384,563,384,563,385,565,385,565,386,566,386,566,387,567,387,567,388,569,388,569,389,570,389,570,390,571,390,571,391,572,391,572,392,575,392,575,393,576,393,576,394,578,394,578,395,580,395,580,396,581,396,581,398,582,398,582,400,583,400,583,401,584,401,584,402,587,402,587,403,588,403,587,403,587,410,577,410,577,411,560,411,560,412,557,412,557,414,556,414,556,416,555,416,555,418,554,418,554,420,553,420,553,421,552,421,552,423,551,423,551,425,550,425,550,427,549,427,549,428,548,428,548,433,549,433,549,435,550,435,550,436,551,436,551,438,550,438,550,446,549,446,549,448,547,448,547,447,546,447,546,446,545,446,545,445,544,445,544,444,543,444,543,443,542,443,542,442,541,442,541,441,540,441,540,440,539,440,539,439,537,439,537,438,536,438,536,437,535,437,537,437,537,435,535,435,535,434,533,434,533,433,530,433,530,432,528,432,528,431,527,431,527,430,526,430,526,429,525,429,525,428,524,428,524,427,523,427,523,426,522,426,522,425,521,425,521,424,520,424,520,422,519,422,519,421,515,421,515,420,513,420,513,419,512,419,512,418,511,418,511,417,509,417,509,414,507,414,507,412,506,412,506,409,505,409,505,406,504,406,505,406,505,402,506,402,506,399,507,399,507,396,508,396,508,394,509,394,509,391,510,391,510,389,511,389,511,388,512,388,512,387,513,387,513,386,514,386,514,385,515,385,515,381,516,381,516,379,517,379,517,378,518,378,518,376,519,376,519,374,518,374,519,374,519,371,520,371,520,370,522,370,522,371,523,371,523,373,524,373,524,377,525,377,525,380,526,380,526,381,530,381,530,382,531,382,531,383,535,383,535,382,536,382,536,381,537,381,537,379,538,379,538,378,539,378,539,376,540,376,540,375,541,375,541,374,542,374,542,373,543,372,546,372" />
+                                <area id="MEX" data-id-estado="15" alt="MEX" title="Estado de M&eacute;xico"
+                                    class="area" href="#" shape="poly"
+                                    coords="369,324,369,322,370,322,370,321,371,321,371,319,371,320,373,320,373,321,375,321,375,322,379,322,379,323,380,323,380,327,381,327,381,329,387,329,387,327,388,327,388,326,390,326,390,325,390,329,392,329,392,330,398,330,398,333,397,333,397,338,398,338,398,348,397,348,397,349,396,349,396,348,395,348,395,347,394,347,394,344,393,344,393,340,392,340,392,338,391,338,391,337,390,337,390,335,389,335,389,334,387,334,387,336,386,336,386,337,385,337,385,339,384,339,384,340,383,340,383,346,384,346,384,348,383,348,383,349,382,349,382,351,381,351,381,352,380,352,380,353,379,353,379,354,373,354,373,356,372,356,372,357,368,357,368,358,366,358,366,359,365,359,365,360,364,360,364,361,363,361,363,360,362,360,362,356,361,356,361,351,362,351,362,349,363,349,363,346,364,346,364,340,365,340,365,334,366,334,366,331,367,331,367,330,368,330,368,324,369,324" />
+                                <area id="OAX" data-id-estado="20" alt="OAX" title="Oaxaca" class="area" href="#"
+                                    shape="poly"
+                                    coords="447,356,447,357,448,357,448,359,449,359,449,361,450,361,450,362,451,362,451,364,452,364,452,365,453,365,453,366,455,366,455,367,461,367,461,368,462,368,462,373,461,373,461,379,462,379,462,380,463,380,463,381,464,381,464,382,470,382,470,381,472,381,472,380,473,380,473,379,475,379,475,378,476,378,476,381,477,381,477,382,478,382,478,383,479,383,479,384,480,384,480,385,482,385,482,386,484,386,484,389,492,389,492,390,507,390,507,391,506,391,506,394,505,394,505,397,504,397,504,399,503,399,503,402,502,402,502,409,503,409,503,411,504,411,504,415,505,415,504,415,504,414,502,414,502,413,499,413,499,412,496,412,496,411,491,411,494,411,494,409,493,409,493,408,492,408,492,407,490,407,490,408,488,408,488,409,488,406,485,406,485,407,483,407,483,411,484,411,484,412,485,412,478,412,478,413,476,413,476,414,475,414,475,415,474,415,474,416,473,416,473,417,470,417,470,418,468,418,468,419,465,419,465,420,462,420,462,421,460,421,460,422,458,422,458,423,456,423,456,424,454,424,454,425,445,425,445,424,442,424,442,423,439,423,439,422,437,422,437,421,435,421,435,420,432,420,432,419,424,419,424,418,418,418,418,417,416,417,416,416,415,416,415,415,414,415,414,414,412,414,412,413,410,413,410,412,404,412,404,411,405,411,405,410,406,410,406,409,407,409,407,408,408,408,408,407,409,407,409,406,410,406,410,405,411,405,411,404,412,404,412,403,413,403,413,402,414,402,414,401,415,401,415,399,414,399,414,395,413,395,413,393,412,393,412,392,411,392,411,391,410,391,410,390,409,390,409,389,408,389,408,388,407,388,407,385,406,385,406,374,407,374,407,373,408,373,408,372,412,372,412,373,418,373,418,370,417,370,417,366,418,366,418,365,419,365,419,367,420,367,420,368,421,368,421,370,422,370,422,371,425,371,425,370,426,370,426,369,437,369,437,368,438,368,438,367,439,367,439,366,440,366,440,365,441,365,441,363,442,363,442,362,443,362,443,360,444,360,444,356,447,356" />
+                                <area id="PUE" data-id-estado="21" alt="PUE" title="Puebla" class="area" href="#"
+                                    shape="poly"
+                                    coords="417,309,417,307,418,307,418,306,419,306,419,309,420,309,420,310,421,310,421,311,422,311,422,312,423,312,420,312,420,313,419,313,419,322,420,322,420,323,421,323,421,324,426,324,426,323,427,323,427,321,427,322,429,322,429,323,431,323,430,323,430,325,429,325,429,327,428,327,428,330,427,330,427,333,426,333,426,340,427,340,427,341,429,341,429,342,432,342,432,343,434,343,430,343,430,344,428,344,428,349,427,349,427,351,426,351,426,356,427,356,427,357,429,357,429,358,430,358,430,359,431,359,431,361,432,361,432,362,437,362,437,361,438,361,438,363,439,363,439,364,438,364,438,365,436,365,436,366,434,366,434,367,423,367,423,366,422,366,422,363,421,363,421,362,418,362,418,363,417,363,417,364,416,364,416,365,415,365,415,366,414,366,414,370,415,370,415,371,414,371,414,370,406,370,406,371,404,371,404,372,404,371,402,371,402,370,399,370,399,369,397,369,397,368,396,368,396,367,395,367,395,366,394,366,394,365,393,365,393,364,391,364,393,364,393,363,395,363,395,362,396,362,396,363,398,363,398,362,399,362,399,358,400,358,400,354,399,354,400,354,400,339,402,339,402,340,403,340,403,342,404,342,404,343,405,343,405,344,407,344,407,345,413,345,413,344,417,344,417,343,418,343,418,342,421,342,421,341,422,341,422,339,421,339,421,337,419,337,419,336,417,336,417,334,416,334,416,333,414,333,414,332,412,332,412,331,411,331,411,330,410,330,410,327,411,327,411,324,412,324,412,319,411,319,411,318,410,318,411,318,411,317,412,317,412,316,414,316,414,314,415,314,415,313,416,313,416,309,417,309" />
+                                <area id="ROO" data-id-estado="23" alt="ROO" title="Quintana Roo" class="area" href="#"
+                                    shape="poly"
+                                    coords="610,320,610,319,611,319,611,318,612,318,612,317,614,317,614,316,615,316,615,315,616,315,616,314,618,314,618,313,619,313,619,312,621,312,621,311,622,311,622,310,623,310,623,309,625,309,625,308,626,308,626,307,627,307,627,306,629,306,629,305,630,305,630,304,631,304,631,303,633,303,633,302,634,302,634,301,635,301,635,300,636,300,636,299,638,299,638,298,639,298,639,297,640,297,640,296,641,296,641,295,642,295,642,292,643,292,643,289,644,289,644,278,647,278,647,277,649,277,649,274,639,274,648,274,648,273,652,273,652,274,653,274,653,275,655,275,655,276,657,276,657,278,658,278,658,281,659,281,659,283,660,283,659,283,659,285,658,285,658,287,657,287,657,289,656,289,656,291,655,291,655,293,654,293,654,294,653,294,653,295,652,295,652,296,651,296,651,297,650,297,650,299,649,299,649,301,648,301,648,303,647,303,647,305,646,305,646,314,644,314,644,317,643,317,643,318,641,318,641,321,642,321,642,322,645,322,645,321,648,321,648,320,648,321,647,321,647,323,646,323,646,324,645,324,645,325,643,325,643,327,642,327,642,329,643,329,643,330,645,330,645,329,647,329,646,329,646,330,645,330,645,337,644,337,644,344,643,344,643,350,642,350,642,353,642,352,641,352,641,349,640,349,640,348,639,348,639,347,637,347,637,345,638,345,638,340,639,340,639,338,638,338,638,337,636,337,636,338,635,338,635,339,634,339,634,340,633,340,633,345,632,345,632,347,631,347,631,348,629,348,629,349,627,349,627,350,626,350,626,352,625,352,625,354,624,354,624,356,623,356,623,358,622,358,622,360,621,360,621,362,620,362,620,364,618,364,618,363,617,363,617,362,614,362,614,363,613,363,613,365,612,365,612,367,610,367,610,366,609,366,609,357,608,357,608,345,607,345,607,335,606,335,606,327,605,327,605,323,606,323,606,322,607,322,607,321,608,320,610,320" />
+                            </map>
+                            <div id='content_mapa'>
+                                <img id="map_ID" class="map" src="assets/images/mapa.png" usemap="#mexico"
+                                    title="Mexico" alt="Mexico" />
+                                <div id="edo">&nbsp;</div>
+                                <div class="escudo"></div>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="trainer-item3">
+                        <video autoplay muted loop width="300" height="300" id="bg-vide2">
+                            <source src="assets/images/video2.mp4" type="video/mp4" />
+                        </video>
+                        <div class="main-button ">
+                            <a href="products.html">Ver mas productos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+
+        </div>
+    </section>
+    <!-- ***** Cars Ends ***** -->
+
+    <section class="section section-bg" id="schedule" style="background-image: url(assets/images/banner5.png)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 offset-lg-3">
+                    <div class="section-heading dark-bg">
+                        <h2>NUESTRA <em>MISION</em></h2>
+                        <img src="assets/images/line-dec.png" alt="">
+                        <h3 id="texto">Llevar a la mesa de los hogares mexicanos productos saludables, de la más alta
+                            calidad por sus sabores exquisitos, sus aromas y texturas que los hacen.</h3>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ***** Blog Start ***** -->
+    <section class="section" id="our-classes">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Lee nuestro <em>Blog</em></h2>
+                        <img src="assets/images/line-dec.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="tabs">
+                <div class="col-lg-4">
+                    <ul>
+                        <li><a href='#tabs-1'>Lorem ipsum dolor sit amet, consectetur adipisicing.</a></li>
+                        <li><a href='#tabs-2'>Aspernatur excepturi magni, placeat rerum nobis magnam libero! Soluta.</a>
+                        </li>
+                        <li><a href='#tabs-3'>Sunt hic recusandae vitae explicabo quidem laudantium corrupti non
+                                adipisci nihil.</a></li>
+                        <div class="main-rounded-button"><a href="blog.html">Leer mas</a></div>
+                    </ul>
+                </div>
+                <div class="col-lg-8">
+                    <section class='tabs-content'>
+                        <article id='tabs-1'>
+                            <img src="assets/images/blog-image-1-940x460.jpg" alt="">
+                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+
+                            <p><i class="fa fa-user"></i> John Doe &nbsp;|&nbsp; <i class="fa fa-calendar"></i>
+                                27.07.2020 10:10 &nbsp;|&nbsp; <i class="fa fa-comments"></i> 15 comments</p>
+
+                            <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend
+                                hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem
+                                tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut,
+                                accumsan diam.</p>
+                            <div class="main-button">
+                                <a href="blog-details.html">Continuar leyendo</a>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Blog End ***** -->
+
+    <!-- ***** Call to Action Start ***** -->
+    <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner4.png  )">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content">
+                        <h2>O<em>BIO</em></h2>
+                        <h3 id="texto2">Estámos comprometidos en salvaguardar la biodiversidad, sus parcelas de
+                            cafetales, de cacaotales, sus apiarios y sus huertos...</h3>
+                        <div class="main-button">
+                            <a href="contact.html">Contactenos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Call to Action End ***** -->
+
+    <!-- ***** Testimonials Item Start ***** -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>LEER <em>TESTIMONIOS</em></h2>
+                        <img src="assets/images/line-dec.png" alt="waves">
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="features-items">
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="assets/images/features-first-icon.png" alt="First One">
+                            </div>
+                            <div class="right-content">
+                                <h4>John Doe</h4>
+                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta numquam maxime
+                                        voluptatibus, impedit sed! Necessitatibus repellendus sed deleniti id et!"</em>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="assets/images/features-first-icon.png" alt="second one">
+                            </div>
+                            <div class="right-content">
+                                <h4>John Doe</h4>
+                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta numquam maxime
+                                        voluptatibus, impedit sed! Necessitatibus repellendus sed deleniti id et!"</em>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="features-items">
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img src="assets/images/features-first-icon.png" alt="fourth muscle">
+                            </div>
+                            <div class="right-content">
+                                <h4>John Doe</h4>
+                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta numquam maxime
+                                        voluptatibus, impedit sed! Necessitatibus repellendus sed deleniti id et!"</em>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="left-icon">
+                                <img bOrder-radius="5px 30px 45px 60px" src="assets/images/campesino_0.jpg"
+                                    alt="training fifth">
+                            </div>
+                            <div class="right-content">
+                                <h4>John Doe</h4>
+                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta numquam maxime
+                                        voluptatibus, impedit sed! Necessitatibus repellendus sed deleniti id et!"</em>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <br>
+
+        </div>
+    </section>
+    <!-- ***** Testimonials Item End ***** -->
+
+
+
+
+
+    <!-- ***** Footer Start ***** -->
+    <footer class="pie_pagina">
+
+
+
+        <div class="container">
+
+            <ul class="socialIcons">
+                <li class="facebook"><a href=""><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>
+                <li class="twitter"><a href=""><i class="fa fa-fw fa-twitter"></i>Twitter</a></li>
+                <li class="instagram"><a href=""><i class="fa fa-fw fa-instagram"></i>Instagram</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p><img src="assets/images/tecnm.png" width="150px" height="80px">
+                    <p>
+                </div>
+                <div class="col">
+                    <p><img src="assets/images/ITESCO.png" width="100px" height="100px">
+                    <p>
+                </div>
+                <div class="col">
+                    <p><img src="assets/images/posible.png" width="150px" height="80px">
+                    <p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+
+
+                <p> Copyright © 2021 SIRIUS MEXICO
+                </p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+   
 </body>
 
 </html>
