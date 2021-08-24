@@ -9,7 +9,18 @@ figure, header, nav, section, article, aside, footer, figcaption {
   bOrder: 0;
   outline: 0;
 }
-
+.service-section {
+  display: block;
+  text-align: center;
+  padding: 100px 0 80px;
+}
+.service-item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #555252;
+  font-family: 'Open Sans', Arial, sans-serif;
+  text-transform: uppercase;
+}
 #texto
 {
  color: rgba(252,175,30,0.8);
@@ -75,8 +86,10 @@ figure, header, nav, section, article, aside, footer, figcaption {
 /*mapa */
 .pie_pagina
 {
-   background:linear-gradient(30deg, #757B63,#F58220, #FBAF1C, #F36F4F, #323E48);
+  background: rgba(232,250,192,1) ;
+
 }
+
 .trainer-item2 img
 {
      width: 425px;
@@ -140,7 +153,7 @@ header, nav, section, article, aside, footer, hgroup {
 html, body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  background-color: #fff;
+  
   font-size: 16px;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -173,10 +186,14 @@ global styles
 */
 html,
 body {
-  background:#E5E5E5;
+
   font-family: 'Poppins', sans-serif;
 }
+body.container-fluid{
 
+background: white;
+
+}
 ::selection {
   background: rgb(255,111,74);
   color: #fff;
@@ -205,8 +222,8 @@ body {
 
 .section-heading {
   text-align: center;
-  margin-top: 140px;
-  margin-bottom: 80px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .section-heading h2 {
@@ -214,14 +231,14 @@ body {
   font-weight: 800;
   color: #232d39;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 2px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
 .section-heading h2 em {
   font-style: normal;
-  color: rgb(255,111,74);
+  color:#F2A81D;
 }
 
 .section-heading img {
@@ -240,8 +257,8 @@ body {
   display: inline-block;
   font-size: 15px;
   padding: 12px 20px;
-  background-color: rgb(255,111,74);
-  color: #fff;
+  background: #398647;  /*color de boton*/
+  color: black;
   text-align: center;
   font-weight: 400;
   text-transform: uppercase;
@@ -249,7 +266,7 @@ body {
 }
 
 .main-button a:hover {
-  background-color: #f9735b;
+  background-color: #F2C105;
   color: #fff;
 }
 
@@ -299,7 +316,11 @@ header
 
 .header-area .main-nav {
   min-height: 80px;
-  background: #C49A6C; //COLOR DE BARRA NAVEGACION
+  background: #2ea3f2; /*COLOR DE BARRA NAVEGACION*/
+}
+.header-area.header-sticky {
+  min-height: 80px;
+  background-color: #2ea3f2  ; /*COLOR DE BARRA DE NAVEGACION*/
 }
 
 .header-area .main-nav .logo {
@@ -317,7 +338,7 @@ header
 
 .header-area .main-nav .logo em {
   font-style: normal;
-  color:#636569;
+  color:#7BBF4B;/*COLOR DE CHAIN*/
   font-weight: 900;
 }
 
@@ -361,7 +382,7 @@ header
 
 .header-area .main-nav .nav li:hover > a,
 .header-area .main-nav .nav li > a.active {
-  color: #636569 !important;
+  color: #013269 !important;
   opacity: 1;
 }
 
@@ -482,17 +503,14 @@ header
   background-color: #1e1e1e;
 }
 
-.header-area.header-sticky {
-  min-height: 80px;
-  background-color:#C49A6C  ; //COLOR DE BARRA DE NAVEGACION
-}
+
 
 .header-area.header-sticky .nav {
   margin-top: 20px !important;
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #F3F3EC;
+  color: #00c995;
 }
 
 @media (max-width: 1200px) {
@@ -663,7 +681,7 @@ banner
   position: absolute;
   width: 80%;
   left: 50%;
-  top: 50%;
+  top: 78%;
   transform: translate(-50%,-50%);
 }
 
@@ -688,7 +706,7 @@ banner
 
 .main-banner .caption h2 em {
   font-style: normal;
-  color: rgb(255, 111, 74);
+  color:#F2A81D;
   font-weight: 900;
 }
 
@@ -761,7 +779,7 @@ subscribe
 
 .cta-content h2 em {
   font-style: normal;
-  color: rgb(255,111,74);
+  color: #F2C105;
 }
 
 .cta-content p {
@@ -819,8 +837,7 @@ Our Classes
   font-size: 19px;
   letter-spacing: 0.5px;
   font-weight: 600;
-  background-color: rgb(255,111,74);
-}
+background-color:#198754;}
 #tabs .main-rounded-button a:hover {
   background-color: #f9735b;
 }
@@ -1005,10 +1022,13 @@ trainers
 
 #trainers .trainer-item {
   background-color: #fff;
-  bOrder-radius: 5px;
+  border-radius: 5px 5px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
   padding: 15px;
   margin-bottom: 30px;
+  height: 761px;
+  
+
 }
 
 #trainers .trainer-item img {
